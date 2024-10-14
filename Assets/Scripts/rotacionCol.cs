@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class rotacionCol : MonoBehaviour
+{
+    float velocidad = 18;
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Rotate(new Vector3(0,0,10)* velocidad * Time.deltaTime);
+    }
+}
