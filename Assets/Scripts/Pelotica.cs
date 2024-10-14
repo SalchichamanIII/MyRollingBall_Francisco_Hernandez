@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Pelotica : MonoBehaviour
 {
+    Rigidbody rb;
     [SerializeField] float fuerza;
+    [SerializeField] float velocidad;
     [SerializeField] float distanciaChoqueSuelo;
     void Start()
     {
@@ -29,7 +31,7 @@ public class Pelotica : MonoBehaviour
 
     private void condicionSalto()
     {
-        if(Input.GetKey(KeyCode.Space) && estaEnElSuelo())
+        if(Input.GetKeyDown(KeyCode.Space) && estaEnElSuelo())
         {
             saltoNormal();
         }
@@ -48,6 +50,6 @@ public class Pelotica : MonoBehaviour
 
     private bool estaEnElSuelo()
     {
-        return Physics.Raycast(Transform.position, Vector3.down , distanciaChoqueSuelo);
+        return Physics.Raycast(transform.position, Vector3.down , distanciaChoqueSuelo);
     }
 }
