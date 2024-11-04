@@ -54,12 +54,5 @@ public class Pelotica : MonoBehaviour
         return Physics.Raycast(transform.position, Vector3.down , distanciaChoqueSuelo);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("muerte"))
-        {
-            SceneManager.LoadScene(1);
-        }
-            
-    }
+    
 }
