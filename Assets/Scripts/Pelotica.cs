@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pelotica : MonoBehaviour
 {
@@ -51,5 +52,14 @@ public class Pelotica : MonoBehaviour
     private bool estaEnElSuelo()
     {
         return Physics.Raycast(transform.position, Vector3.down , distanciaChoqueSuelo);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("muerte"))
+        {
+            SceneManager.LoadScene(1);
+        }
+            
     }
 }
