@@ -7,7 +7,7 @@ public class CanvasManager : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 
     public void Exit()
@@ -18,5 +18,13 @@ public class CanvasManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(1);
+    }
+    public void Continue()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
