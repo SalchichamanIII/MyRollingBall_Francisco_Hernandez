@@ -12,7 +12,7 @@ public class Camara : MonoBehaviour
     }
 
     
-    void Update()
+    void LateUpdate()
     {
         transform.position = jugador.transform.position + posicionRelativa;
     }

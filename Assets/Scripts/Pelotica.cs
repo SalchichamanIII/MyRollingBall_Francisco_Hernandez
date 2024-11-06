@@ -9,6 +9,8 @@ public class Pelotica : MonoBehaviour
     [SerializeField] float fuerza;
     [SerializeField] float velocidad;
     [SerializeField] float distanciaChoqueSuelo;
+
+    private Vector3 movimiento;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -26,8 +28,11 @@ public class Pelotica : MonoBehaviour
         float movimientoHorizontal = Input.GetAxis("Horizontal");
         float movimientoVertical = Input.GetAxis("Vertical");
 
-        Vector3 movimiento = new Vector3(movimientoHorizontal, 0.0f, movimientoVertical);
-        rb.AddForce(movimiento * velocidad);
+        movimiento = new Vector3(movimientoHorizontal, 0.0f, movimientoVertical);
+    }
+    private void FixedUpdate()
+    {
+        rb.AddForce(movimiento * velocidad, ForceMode.Force);
     }
 
     private void condicionSalto()
