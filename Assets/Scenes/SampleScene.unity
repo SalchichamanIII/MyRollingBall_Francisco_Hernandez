@@ -27771,6 +27771,9 @@ GameObject:
   - component: {fileID: 1094468567}
   - component: {fileID: 1094468566}
   - component: {fileID: 1094468569}
+  - component: {fileID: 1094468570}
+  - component: {fileID: 1094468572}
+  - component: {fileID: 1094468571}
   m_Layer: 0
   m_Name: Tube001
   m_TagString: Untagged
@@ -27860,11 +27863,74 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: -1
   m_Mesh: {fileID: -6150326042995890324, guid: 3ac13bd74d0b4ab478f04ab1b14d8fd4, type: 3}
+--- !u!65 &1094468570
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094468565}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6288732, y: 0.11792721, z: 1.755139}
+  m_Center: {x: 0, y: -0.098254874, z: -0.0004693021}
+--- !u!65 &1094468571
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094468565}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.12163452, y: 0.31443664, z: 1.7560781}
+  m_Center: {x: -0.25361916, y: 0, z: 0}
+--- !u!65 &1094468572
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094468565}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.12505145, y: 0.31443664, z: 1.7560781}
+  m_Center: {x: 0.25191078, y: 0, z: 0}
 --- !u!4 &1095254130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 765655438936521813, guid: 142187da21f582847bfa3f3051cafb46,
@@ -52490,7 +52556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 127.4, y: -23.331055}
+  m_AnchoredPosition: {x: 127.3999, y: -23.331055}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143363816
