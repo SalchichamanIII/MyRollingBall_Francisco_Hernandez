@@ -8,6 +8,12 @@ public class ParedCubos : MonoBehaviour
     private bool iniciarTimer;
     private float timer = 0;
     [SerializeField] private Rigidbody[] rbs;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -33,6 +39,14 @@ public class ParedCubos : MonoBehaviour
             Time.timeScale = 0.2f;
             iniciarTimer = true;
 
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            audioSource.Play();
         }
     }
 }

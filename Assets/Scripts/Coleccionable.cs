@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Coleccionable : MonoBehaviour
@@ -7,9 +8,11 @@ public class Coleccionable : MonoBehaviour
     public Inventario inventario;
     [SerializeField] Vector3 direccionRot;
     [SerializeField] float velRot;
+    private AudioSource AudioSource;
     void Start()
     {
         inventario = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>();
+        AudioSource = GetComponent<AudioSource>();
 
     }
 
@@ -26,7 +29,13 @@ public class Coleccionable : MonoBehaviour
         {
             inventario.cantidad = inventario.cantidad + 1;
             Destroy(gameObject);
+
+           
         }
         
     }
+
+    
+
+   
 }
